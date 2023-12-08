@@ -1,0 +1,3 @@
+.table-cell-centered {
+    -fx-alignment: CENTER; /* Centrar el contenido de la celda */
+}
