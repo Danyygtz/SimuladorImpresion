@@ -4,26 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e6240d-f33f-47ae-a016-9552bc098b08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/ProgressController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/ProgressThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/QueueProgressBarExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/TableViewExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/appimpresiones/estilos/styles.css" afterDir="false" />
+    <list default="true" id="85e6240d-f33f-47ae-a016-9552bc098b08" name="Changes" comment="creacion de app, pero no me funciona bien">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/TableViewExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/appimpresiones/TableViewExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,45 +67,47 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2ZFYYUrPzbk4hkHJg2CmQhKyDyH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Unnamed.executor": "Run",
-    "Gradle.AppImpresiones [:HelloApplication.main()].executor": "Run",
-    "Gradle.AppImpresiones [:QueueProgressBarExample.main()].executor": "Run",
-    "Gradle.AppImpresiones [run].executor": "Debug",
-    "Gradle.Build AppImpresiones.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppImpresiones [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppImpresiones [:ProgressController.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppImpresiones [:QueueProgressBarExample.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppImpresiones [run].executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.Build AppImpresiones.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/org/example/appimpresiones/estilos" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProgressController">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.appimpresiones.HelloApplication" />
       <module name="AppImpresiones.main" />
@@ -206,11 +193,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702019343938</updated>
-      <workItem from="1702019345093" duration="14735000" />
+      <workItem from="1702019345093" duration="15192000" />
+      <workItem from="1702048735082" duration="29000" />
+      <workItem from="1702049718226" duration="628000" />
+      <workItem from="1702079029148" duration="1052000" />
+      <workItem from="1702133419153" duration="4985000" />
+      <workItem from="1702144761229" duration="5241000" />
+      <workItem from="1702153591356" duration="3673000" />
     </task>
+    <task id="LOCAL-00001" summary="creacion de app, pero no me funciona bien">
+      <option name="closed" value="true" />
+      <created>1702041298397</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702041298397</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="creacion de app, pero no me funciona bien" />
+    <option name="LAST_COMMIT_MESSAGE" value="creacion de app, pero no me funciona bien" />
   </component>
 </project>
