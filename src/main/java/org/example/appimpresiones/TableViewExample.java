@@ -17,39 +17,50 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class TableViewExample extends Thread {
+    // Variable estática para manejar las animaciones
     public static boolean flagAnimation = false;
+    // Variable para manejar la tabla
     public static TableView<DataItem> table;
+    // Variable para manejar los elementos de la tabla
     public static Queue<DataItem> progressQueue;
+    // Variable para manejar el flujo (Stop/Start)
     private boolean flagStop;
+
+    // Método implementado para manejar el Thread
     @Override
     public void run() {
+        // Ciclo infinito
         while (true) {
+            // Si no la cola de procesos es vacia
+            // Si no Existe una animación actualmente en proceso
+            // Si no se ha presionado el botón stop
+            // Rntonces inicia el if
             if(!progressQueue.isEmpty() && !flagAnimation && !flagStop) {
+                // método para ejecutar procesos fuera del Thread
                 Platform.runLater(() -> {
+                    // Método peek para traer el elemento cabeza sin eliminarlo
+                    // Se está obteniendo el primer proceso e iniciando su proceso (animación)
                     progressQueue.peek().animateProgressBar();
                 });
             }
             try {
+                // Deten el programa 1 segundo
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
-            }
-            try {
-                sleep(1000); // Puedes ajustar el tiempo de espera según tus necesidades
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
         }
     }
 
     public TableViewExample() {
         // Crear la tabla
-        this.table = new TableView<>();
-        this.progressQueue = new ConcurrentLinkedQueue<>();
-        // flag
+        table = new TableView<>();
+        // Crea el arrayList para almacenar los elementos
+        progressQueue = new ConcurrentLinkedQueue<>();
+        // Inicializando la variable en falso (No se ha presioando el botón)
         this.flagStop = false;
         // Configurar tabla
-        // Configurar el ajuste automático de las columnas
+        // Configurar el ajuste automático (tamaño) de las columnas
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         // Crear las columnas
@@ -82,7 +93,6 @@ public class TableViewExample extends Thread {
 
         // Agregar las columnas a la tabla
         table.getColumns().addAll(column1, column2, column3, column4, progressColumnBar);
-
     }
 
     public boolean isFlag() {
@@ -107,7 +117,6 @@ public class TableViewExample extends Thread {
         //private final SimpleObjectProperty<ProgressIndicator> progressProperty;
 
         public DataItem(int string1, String string2, int intValue, LocalDate dateValue, Double progress) {
-
             this.string1 = new SimpleIntegerProperty(string1);
             this.string2 = new SimpleStringProperty(string2);
             this.intProperty = new SimpleIntegerProperty(intValue);
@@ -144,6 +153,7 @@ public class TableViewExample extends Thread {
             //return progressProperty;
         //}
 
+        // método para obtener la fecha
         public SimpleStringProperty dateAsStringProperty() {
             DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
             String formattedDate = dateProperty.get().format(dateFormat);
@@ -152,17 +162,24 @@ public class TableViewExample extends Thread {
 
         // Método para animar la ProgressBar automáticamente
         private void animateProgressBar() {
+            // Se cambia el proceso a que ya existe una animación en proceso
             flagAnimation = true;
+            // Se crea la animacion con 10s
             Timeline timeline = new Timeline(
                     new KeyFrame(Duration.ZERO, new KeyValue(progressBar, 0.0)),
                     new KeyFrame(Duration.seconds(10), new KeyValue(progressBar, 1.0))
             );
+            // Se configura el proceso final cuando termina la animación
             timeline.setOnFinished(event -> {
+                // se cambia la variable para saber que no hay ninguna animación actualmente
                 flagAnimation = false;
+                // método poll para traer el elemento cabeza y eliminarlo
+                // Se elimina el elemento de la tabla
                 TableViewExample.table.getItems().remove(progressQueue.poll());
             });
+            // se configura para que la animación nada más se realice 1 vez
             timeline.setCycleCount(1);
-
+            // se inicia la animación
             timeline.play();
         }
     }
